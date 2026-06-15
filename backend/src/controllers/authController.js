@@ -10,10 +10,9 @@ export const registerUser= async(req,res)=>{
 
         });
 
-    }catch(error){
-        res.status(404).json({
+    } catch (error) {
+        res.status(400).json({
             success: false,
-            message: false,
             message: error.message,
         });
     }

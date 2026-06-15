@@ -17,7 +17,7 @@ const User = sequelize.define(
 
         email:{
             type: DataTypes.STRING,
-            alloeNull: false,
+            allowNull: false,
             unique:true,
         },
 
@@ -27,8 +27,8 @@ const User = sequelize.define(
         },
 
         role:{
-            type: DataTypes.ENUM("Customer", "admin"),
-            deafaultValue: "customer",
+            type: DataTypes.ENUM("customer", "admin"),
+            defaultValue: "customer",
         },
 
 
