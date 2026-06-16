@@ -2,6 +2,7 @@ import dotenv from "dotenv";
 import app from "./src/app.js";
 import sequelize from "./src/config/database.js";
 import User from "./src/models/User.js";
+import Account from "./src/models/Account.js";
 
 dotenv.config();
 
@@ -13,7 +14,7 @@ const startServer = async () => {
 
         console.log("✅ Database Connected Successfully");
 
-        await sequelize.sync();
+        await sequelize.sync({ alter: true });
 
         console.log("✅ Models Synced Successfully");
 

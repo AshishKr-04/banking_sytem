@@ -23,7 +23,7 @@ const User = sequelize.define(
 
         password:{
             type: DataTypes.STRING,
-            alloeNull: false,
+            allowNull: false,
         },
 
         role:{
